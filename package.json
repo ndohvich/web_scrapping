@@ -1,0 +1,20 @@
+{
+  "name": "web_scrapping",
+  "version": "1.0.0",
+  "description": "Application en ligne de commande qui me permet de récuperer des données sur la comparaison de la crypto monnaie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndohvich/web_scrapping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndohvich/web_scrapping/issues"
+  },
+  "homepage": "https://github.com/ndohvich/web_scrapping#readme"
+}

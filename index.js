@@ -26,22 +26,53 @@ async function getPriceFeed(){
             'volume',
             'circulatingSupply'
         ]
+        const coinArr = [];
 
         $(elemSelector).each((parentIdx, parentElem) => {
+            let keyIdx = 0;
+            const coinObj = {};
+
             if(parentIdx <= 9){
                 $(parentElem).children().each((childIdx, childElem) => {
-                    const tdValue = $(childElem).text();
+                    let tdValue = $(childElem).text();
+
+                    if(keyIdx === 1 || keyIdx === 6){
+                        tdValue = $('p:first-child', $(childElem).html()).text();
+                    }
                     
                     if(tdValue){
-                        console.log(keys[childIdx]);
+                        coinObj[keys[keyIdx]] = tdValue;
+                        keyIdx++;
                     }
                 })
+                coinArr.push(coinObj);
             }
-        });
+        })
+        return coinArr
     } catch(err){
         console.error(err)
     }
 }
 
-//Execution de la fonction
-getPriceFeed();
+//création du serveur 
+const app = express()
+
+//gestion des cas 
+app.get('/api/price-feed', async(req, res) => {
+    try{
+        const priceFeed = await getPriceFeed()
+
+        return res.status(200).json({
+            result: priceFeed
+        })
+    } catch(err){
+        return res.status(500).json({
+            err: err.toString(),
+        })
+    }
+})
+
+//lancement du serveur
+app.listen(3000, () => {
+    console.log("Running on port 3000");
+})

@@ -1,5 +1,5 @@
-# web_scrapping
- Application en ligne de commande qui me permet de récuperer des données sur la comparaison de la crypto monnaie
+# WEB SCRAPING NodeJS
+ Application en ligne de commande qui me permet de récuperer des données sur https://coinmarketcap.com/ afin d'avoir les dernières mise à jour des différentes crypto monnaie.
 
  ## Installation des paquets nécessaires 
  - express 
@@ -11,4 +11,4 @@
 
  ## Lancement du projet 
  il suffit pour celà de lancer la commande : 
- - nodemon index.js
+ - <b>nodemon index.js</b>

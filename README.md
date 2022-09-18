@@ -5,3 +5,10 @@
  - express 
  - axios 
  - cheerio
+ - nodemon
+
+ (Quelqu'un d'autres aurait pu utiliser aussi (qoa et puppetee))
+
+ ## Lancement du projet 
+ il suffit pour celà de lancer la commande : 
+ - nodemon index.js

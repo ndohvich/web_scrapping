@@ -9,6 +9,9 @@
 
  (Quelqu'un d'autres aurait pu utiliser aussi (qoa et puppetee))
 
- ## Lancement du projet 
+ ## Lancement du projet dans le terminal
  il suffit pour celà de lancer la commande : 
  - <b>nodemon index.js</b>
+ 
+ ## Lancement du projet sur le navigateur
+ - <b>localhost:3000/api/price-feed</b>
